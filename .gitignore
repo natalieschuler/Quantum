@@ -15,12 +15,12 @@
 # Problemset2/*
 
 # Or ignore specific files if you only want to target those giving warnings:
-Problemset1/*.aux
-Problemset1/*.fls
-Problemset1/*.log
-Problemset1/*.mst
-Problemset1/*.ipynb
+# Problemset1/*.aux
+# Problemset1/*.fls
+# Problemset1/*.log
+# Problemset1/*.mst
+# Problemset1/*.ipynb
 
-Problemset2/*.aux
-Problemset2/*.fls
-Problemset2/*.log
+# Problemset2/*.aux
+# Problemset2/*.fls
+# Problemset2/*.log
