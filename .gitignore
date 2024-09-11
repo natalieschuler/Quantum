@@ -11,8 +11,8 @@
 .ipynb_checkpoints/
 
 # Ignore problem set directories and files
-Problemset1/*
-Problemset2/*
+# Problemset1/*
+# Problemset2/*
 
 # Or ignore specific files if you only want to target those giving warnings:
 Problemset1/*.aux
