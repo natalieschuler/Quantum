@@ -1,0 +1,206 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{blindtext}
+\usepackage{titlesec}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{amsmath}
+\usepackage{newtxtext}
+\usepackage{changepage}
+\setlength{\columnsep}{0.75cm}
+\usepackage{biblatex}
+\addbibresource{references.bib}
+\usepackage{lipsum}
+\newcommand*\rfrac[2]{{}^{#1}\!/_{#2}}
+\usepackage{caption}
+\usepackage{enumerate}
+\captionsetup[figure]{font=footnotesize}
+\definecolor{MSBlue}{rgb}{.204,.353,.541}
+\definecolor{MSLightBlue}{rgb}{.31,.506,.741}
+
+\usepackage{tcolorbox} % For creating color boxes
+\newtcolorbox{mybox}[1]{colback=MSLightBlue!18!white,colframe=MSBlue,fonttitle=\sffamily\bfseries,title=#1}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{20 September 2024}
+\lhead{CHEM 675}
+\chead{\textbf{Problem Set 2}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{Fall 2024 University of Wisconsin - Madison}
+
+% Set formats for each heading level
+\titleformat*{\section}{\large\bfseries\sffamily\color{MSBlue}}
+\titleformat*{\subsection}{\normalsize\bfseries\sffamily\color{MSLightBlue}}
+\titleformat*{\subsubsection}{\itshape}
+
+\newenvironment{Figure}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
+
+\makeatletter
+\renewcommand{\maketitle}{\bgroup\setlength{\parindent}{0pt}
+\begin{flushleft}
+  \textbf{\@title}
+
+  \@author
+\end{flushleft}\egroup
+}
+\makeatother
+
+\title{\LARGE {\fontfamily{qhv}\selectfont \textcolor{MSBlue}{Problem Set 2}}}
+
+\author{\vspace{0.2cm} Avery Greene\textsuperscript{1}, Haejung Koh\textsuperscript{1}, Daniel Ruiz De Castilla\textsuperscript{1}, Kolton Mehalko\textsuperscript{1} 
+ \\[0.2 cm]
+\small{\textit{\textsuperscript{1}Department of Chemistry, University of Wisconsin - Madison, 1101 University Ave, Madison, WI 53706}}}
+
+\date{August 2023}
+
+\begin{document}
+
+\maketitle
+
+\begin{mybox}{Question 1}
+Let the initial wavefunction
+\[
+\Psi(x, t = 0) = \frac{1}{\sqrt{2}}(\phi_1(x) - \phi_3(x))
+\]
+where $\phi_i(x)$ is the $i^{th}$ lowest-energy eigenstate of the particle in a box.
+\begin{itemize}
+    \item[(a)] Give the analytic expression for the probability density.
+    \item[(b)] Give the analytic expression for the expected evolution of the probability density.
+    \item[(c)] Explain how the expected evolution of the probability density relates to the expected result for a nonstationary state.
+    \item[(d)] Give the analytic expression for the average position as a function of time.
+\end{itemize}
+\end{mybox}
+
+\begin{adjustwidth}{5pt}{5pt}
+
+\subsection*{Part A}
+The probability density is given by:
+\begin{align*}
+  |\Psi(x, t = 0)|^2 &= \left| \frac{1}{\sqrt{2}} (\phi_1(x) - \phi_3(x)) \right|^2 \\
+  &= \frac{1}{2} \left[ |\phi_1(x)|^2 + |\phi_3(x)|^2 - \phi_1^*(x) \phi_3(x) - \phi_3^*(x) \phi_1(x) \right] \\
+  &= \frac{1}{2} \left[ |\phi_1(x)|^2 + |\phi_3(x)|^2 - 2 \, \text{Re}[\phi_1^*(x) \phi_3(x)] \right].
+\end{align*}
+
+For the particle in a box with length $L$, the wavefunctions are:
+\[
+\phi_n(x) = \sqrt{\frac{2}{L}} \sin \left( \frac{n \pi x}{L} \right), \quad n = 1, 2, 3, \dots
+\]
+
+Substituting $\phi_1(x) = \sqrt{\frac{2}{L}} \sin \left( \frac{\pi x}{L} \right)$ and $\phi_3(x) = \sqrt{\frac{2}{L}} \sin \left( \frac{3 \pi x}{L} \right)$, we get:
+\begin{align*}
+  |\Psi(x, t = 0)|^2 &= \frac{1}{2} \left[ \frac{2}{L} \sin^2 \left( \frac{\pi x}{L} \right) + \frac{2}{L} \sin^2 \left( \frac{3 \pi x}{L} \right) - 2 \frac{2}{L} \sin \left( \frac{\pi x}{L} \right) \sin \left( \frac{3 \pi x}{L} \right) \right] \\
+  &= \frac{1}{L} \left[ \sin^2 \left( \frac{\pi x}{L} \right) + \sin^2 \left( \frac{3 \pi x}{L} \right) - 2 \sin \left( \frac{\pi x}{L} \right) \sin \left( \frac{3 \pi x}{L} \right) \right], \quad \text{(the last term is the interference term)}.
+\end{align*}
+
+\subsection*{Part B}
+At time $t$, the wave function is given by:
+\[
+\Phi_n(x, t) = \frac{1}\left(e^{-iE_n t/\hbar} \right).
+\]
+\[
+\Psi(x, t) = \frac{1}{\sqrt{2}} \left( \phi_1(x) e^{-iE_1 t/\hbar} - \phi_3(x) e^{-iE_3 t/\hbar} \right).
+\]
+Then, the probability density is:
+\begin{align*}
+  |\Psi(x, t)|^2 &= \left| \frac{1}{\sqrt{2}} \left( \phi_1(x) e^{-iE_1 t/\hbar} - \phi_3(x) e^{-iE_3 t/\hbar} \right) \right|^2 \\
+  &= \frac{1}{2} \left[ |\phi_1(x)|^2 + |\phi_3(x)|^2 - 2 \text{Re}[\phi_1^*(x) \phi_3(x) e^{-i(E_3 - E_1) t/\hbar}] \right] \\
+  &= \frac{1}{L} \left[ \sin^2 \left( \frac{\pi x}{L} \right) + \sin^2 \left( \frac{3 \pi x}{L} \right) - 2 \sin \left( \frac{\pi x}{L} \right) \sin \left( \frac{3 \pi x}{L} \right) \cos \left( \frac{(E_3 - E_1) t}{\hbar} \right) \right].
+\end{align*}
+
+\subsection*{Part C}
+The expected evolution of the probability density for a nonstationary state, like this superposition, involves oscillations over time due to the interference between the two states with different energies. This contrasts with a stationary state, where the probability density remains time-independent. The oscillatory behavior reflects the non-stationary nature of the wavefunction, indicating that the system does not stay in a single energy eigenstate.
+
+\subsection*{Part D}
+The average position $\langle x(t) \rangle$ is given by:
+\[
+\langle x(t) \rangle = \int_0^L x |\Psi(x, t)|^2 \, dx.
+\]
+Substituting the expression for $\Psi(x, t)$:
+\[
+\langle x(t) \rangle = \frac{1}{2} \int_0^L x \left( |\phi_1(x)|^2 + |\phi_3(x)|^2 - 2 \text{Re}[\phi_1^*(x) \phi_3(x) e^{-i(E_3 - E_1) t/\hbar}] \right) dx.
+\]
+
+Since $\phi_1(x) = \sqrt{\frac{2}{L}} \sin\left(\frac{\pi x}{L}\right)$ and $\phi_3(x) = \sqrt{\frac{2}{L}} \sin\left(\frac{3\pi x}{L}\right)$ are symmetric about the center of the box ($x = L/2$), their individual contributions to the integral are zero when calculating the time-dependent shift:
+\[
+\int_0^L x |\phi_1(x)|^2 \, dx = \int_0^L x |\phi_3(x)|^2 \, dx = \frac{L}{2}.
+\]
+
+The time dependence in $\langle x(t) \rangle$ arises from the cross term:
+\[
+-2 \text{Re} \left[ \phi_1^*(x) \phi_3(x) e^{-i(E_3 - E_1)t/\hbar} \right] = -2 \phi_1(x) \phi_3(x) \cos\left( \frac{(E_3 - E_1) t}{\hbar} \right).
+\]
+
+Now, the average position can be expressed as:
+\[
+\langle x(t) \rangle = A \cos\left( \frac{(E_3 - E_1) t}{\hbar} \right),
+\]
+where
+\[
+A = -2 \int_0^L x \phi_1(x) \phi_3(x) \, dx.
+\]
+
+This indicates that the particle's average position oscillates in time, with the amplitude \(A\) depending on the overlap integral of $\phi_1(x)$ and $\phi_3(x)$.
+
+\end{adjustwidth}
+
+\begin{mybox}{Question 2}
+Let the initial wavefunction be defined as the Gaussian wavepacket
+\[
+\Psi(x, t = 0) = \mathcal{N} e^{-a^2(x-L/2)^2/2}
+\]
+where $\mathcal{N}$ is the normalization coefficient, $L = 5 \, \textup{\AA}$, and $a = 4 \, \textup{\AA}^{-1}$.
+\begin{itemize}
+    \item[(a)] Demonstrate analytically whether $\Psi(x, t = 0)$ is a stationary state for a particle-in-a-box potential.
+    \item[(b)] Using the accompanying Jupyter notebook:
+    \begin{enumerate}[i.]
+        \item Explain what the function $f(N) = \sum_{i=1}^N c_i^{*}c_i$ represents.
+        \item Plot $f(N)$ for the given expansion coefficients $c_i$.
+        \item Calculate $\mathrm{lim}_{N\rightarrow\infty} f(N).$
+        \item Explain what $f(N)$ says about the number of expansion terms required to accurately simulate the wavefunction.
+        \item Plot $|\Psi(x,t)|^2$ at several choices of $t$ to show how the wavefunction changes in time.
+        \item Explain what $|\Psi(x,t)|^2$ tells us about the motion of a particle in a box.
+        \item Plot $\langle x(t) \rangle$ and $\langle (x-L/2)^2(t) \rangle$.
+        \item Explain the significance of $\langle x(t) \rangle$ and $\langle (x-L/2)^2(t) \rangle$ and their relationships.
+    \end{enumerate}
+\end{itemize}
+\end{mybox}
+
+\begin{adjustwidth}{5pt}{5pt}
+
+\subsection*{Part A}
+The Gaussian wave packet $\Psi(x, t = 0) = \mathcal{N} e^{-a^2(x-L/2)^2/2}$ is not a stationary state for a particle-in-a-box potential. A stationary state is an eigenfunction of the Hamiltonian $H$ of the system. However, the Gaussian wave packet is a superposition of multiple eigenstates of the particle-in-a-box Hamiltonian. Therefore, its time evolution involves contributions from multiple energy eigenstates, leading to time-dependent changes in the probability density $|\Psi(x, t)|^2$. This behavior indicates that the wave packet is not a stationary state.
+
+\subsection*{Part B}
+\begin{itemize}
+    \item[] \textbf{Part I} The function $f(N) = \sum_{i=1}^N c_i^{*} c_i$ represents the cumulative probability of finding the particle in the first $N$ energy eigenstates of the box. The coefficients $c_i$ are the expansion coefficients of the wave packet in terms of the stationary states of the particle-in-a-box.
+    
+    \vspace{0.2cm}
+    \item[] \textbf{Part II}
+    
+    \vspace{0.2cm}
+    \item[] \textbf{Part III} The limit $\mathrm{lim}_{N \rightarrow \infty} f(N) = 1$ indicates that the wave packet can be completely described as a sum over all the stationary states of the particle-in-a-box. This means that the total probability of finding the particle in any of the box's eigenstates is 1.
+    
+    \vspace{0.2cm}
+    \item[] \textbf{Part IV} The function $f(N)$ indicates how many energy eigenstates are required to accurately represent the wave packet. When $f(N)$ is close to 1 for some finite $N$, it means that only the first $N$ terms are needed to approximate the wave packet accurately.
+    
+    \vspace{0.2cm}
+    \item[] \textbf{Part V}
+    
+    \vspace{0.2cm}
+    \item[] \textbf{Part VI} The plot of $|\Psi(x, t)|^2$ shows how the wave packet spreads and oscillates as time progresses, reflecting the dynamics of a particle in a box. The spreading of the wave packet is due to the superposition of multiple energy eigenstates, each evolving with its own frequency.
+    
+    \vspace{0.2cm}
+    \item[] \textbf{Part VII}
+    
+    \vspace{0.2cm}
+    \item[] \textbf{Part VIII} The expectation value $\langle x(t) \rangle$ indicates the average position of the particle as a function of time, while $\langle (x - L/2)^2(t) \rangle$ provides information about the spread of the particle's position around the center of the box. The time dependence of these quantities reveals the motion and the spreading behavior of the wave packet inside the box.
+\end{itemize}
+
+\end{adjustwidth}
+
+\end{document}
