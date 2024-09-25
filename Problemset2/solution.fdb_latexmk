@@ -1,13 +1,15 @@
 # Fdb version 4
-["biber solution"] 0 "solution.bcf" "solution.bbl" "solution" 1726679590.85637 0
+["biber solution"] 0 "solution.bcf" "solution.bbl" "solution" 1727288886.40091 0
   "references.bib" 0 -1 0 ""
   "solution.bcf" 0 -1 0 "pdflatex"
   (generated)
   "solution.bbl"
   "solution.blg"
   (rewritten before read)
-["pdflatex"] 1726679586.71977 "c:/Users/wergh/Desktop/Quantum/Problemset2/solution.tex" "solution.pdf" "solution" 1726679590.8579 2
-  "c:/Users/wergh/Desktop/Quantum/Problemset2/solution.tex" 1726679580 10524 74aaed6bc7b3dc07176db6ada08fc254 ""
+["pdflatex"] 1727288882.2137 "c:/Users/wergh/Desktop/Quantum/Problemset2/solution.tex" "solution.pdf" "solution" 1727288886.40271 0
+  "2-b-iii.png" 1726777196 22467 35d0b9e2ada8ebe8522a9f74e4fef29e ""
+  "2-b-vii.png" 1726821087 21265 3d22cb1568a1693b8bd7026428102394 ""
+  "c:/Users/wergh/Desktop/Quantum/Problemset2/solution.tex" 1727288877 15602 d0e47b2b264c09a6492612b58423edff ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc" 1725650895 2083 60e36f8eac802fcaf19eabe2633b406e ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/tex-gyre/q-rm.enc" 1725655697 2409 c64dab22331c83731e970f6020b4448b ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1725647233 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -30,6 +32,7 @@
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/newtx/txmiaX.tfm" 1725650895 1708 0e60bf8db0699a0f3e7689a7572f87b4 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/tex-gyre/rm-qhvb.tfm" 1725655698 11708 5aac7f7988034c04a6d4bd8779adc879 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/tex-gyre/rm-qhvr.tfm" 1725655698 11980 7d1be12f5c8ebd0bffeed63959d1bf9e ""
+  "c:/texlive/2024/texmf-dist/fonts/tfm/public/txfonts/txtt.tfm" 1725657040 1200 1032be7d597a4dce33bcda3c08fc1be0 ""
   "c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1725642210 30251 6afa5cb1d0204815a708a080681d4674 ""
   "c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1725642210 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1725642210 37912 07513ec114ac737ab54cea0152f4424b ""
@@ -43,6 +46,7 @@
   "c:/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmr.pfb" 1725650895 286816 c3d030d8c7fd436565d9670f5ca64aa0 ""
   "c:/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmri.pfb" 1725650895 248316 ea891a047af89fa529ebd24643780319 ""
   "c:/texlive/2024/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb" 1725655698 112164 9a008608d864b5b2b3e09f1772eadc4f ""
+  "c:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/txtt.pfb" 1725657040 18134 15936cd318391c2532d84d9a2863d73e ""
   "c:/texlive/2024/texmf-dist/fonts/vf/public/newtx/ntx-Bold-tlf-ot1.vf" 1725650895 956 0cf724d01d1d2d4ced0eca019099663a ""
   "c:/texlive/2024/texmf-dist/fonts/vf/public/newtx/ntx-Italic-tlf-ot1.vf" 1725650895 956 2e470d34f6c84588eb717201f2f99e2d ""
   "c:/texlive/2024/texmf-dist/fonts/vf/public/newtx/ntx-Regular-tlf-ot1.vf" 1725650895 956 44be8e0aea9c6d145fc21c9948a6b4b5 ""
@@ -157,11 +161,16 @@
   "c:/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg" 1725649143 678 4792914a8f45be57bb98413425e4c7af ""
   "c:/texlive/2024/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex" 1725649379 95525 6fd0552101a6b1f9b7a84b402ec435ba ""
   "c:/texlive/2024/texmf-dist/tex/latex/lipsum/lipsum.sty" 1725649379 14690 c2c754218a7108db7823a4839c1bc3cd ""
+  "c:/texlive/2024/texmf-dist/tex/latex/listings/listings.cfg" 1725649388 1865 590dd246a0b45afbf728b7c8cdf53b63 ""
+  "c:/texlive/2024/texmf-dist/tex/latex/listings/listings.sty" 1725649388 81407 9bb5c566f0fc5345e3f78fba3da17b12 ""
+  "c:/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty" 1725649388 77023 71dc8ec77fb5648c3af15ec4b791f591 ""
+  "c:/texlive/2024/texmf-dist/tex/latex/listings/lstpatch.sty" 1725649388 353 9024412f43e92cd5b21fe9ded82d0610 ""
   "c:/texlive/2024/texmf-dist/tex/latex/logreq/logreq.def" 1725649465 1620 fb1c32b818f2058eca187e5c41dfae77 ""
   "c:/texlive/2024/texmf-dist/tex/latex/logreq/logreq.sty" 1725649465 6187 b27afc771af565d3a9ff1ca7d16d0d46 ""
   "c:/texlive/2024/texmf-dist/tex/latex/mweights/mweights.sty" 1725650725 4953 67f29a12ea26221103fce6bae3433e60 ""
   "c:/texlive/2024/texmf-dist/tex/latex/newtx/newtxtext.sty" 1725650895 30156 0a19c9edb32312a6fb89020d05f0976d ""
   "c:/texlive/2024/texmf-dist/tex/latex/newtx/ot1ntxtlf.fd" 1725650895 2241 e9e29b034b8eb01c46f61e2fc5a445b2 ""
+  "c:/texlive/2024/texmf-dist/tex/latex/newtx/ot1ntxtt.fd" 1725650895 1494 56d4cfe3e20bd278ed0b52e1404df627 ""
   "c:/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty" 1725651956 1090 bae35ef70b3168089ef166db3e66f5b2 ""
   "c:/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty" 1725651956 373 00b204b1d7d095b892ad31a7494b0373 ""
   "c:/texlive/2024/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty" 1725651956 21013 f4ff83d25bb56552493b030f27c075ae ""
@@ -188,9 +197,11 @@
   "c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1725658366 5543950 2aa73a438b7054b2327b796fbe5f4275 ""
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1725658832 8239315 61bde78504c661da3db98255af8e5ee9 ""
   "c:/texlive/2024/texmf.cnf" 1725658330 713 e69b156964470283e0530f5060668171 ""
-  "solution.aux" 1726679589 145 0c277ce5a605f838416aa36f8b50b65e "pdflatex"
+  "partVMASTER.png" 1727288836 163387 729e2978194e8eeb258b28cd677a6188 ""
+  "solution.aux" 1727288885 125 f0496c8730d502219bd150867afec959 "pdflatex"
   "solution.bbl" 0 -1 0 "biber solution"
-  "solution.tex" 1726679580 10524 74aaed6bc7b3dc07176db6ada08fc254 ""
+  "solution.run.xml" 1727288885 2333 9305465ce7b0431e118fdfbd5576ca5d "pdflatex"
+  "solution.tex" 1727288877 15602 d0e47b2b264c09a6492612b58423edff ""
   (generated)
   "solution.aux"
   "solution.bcf"
