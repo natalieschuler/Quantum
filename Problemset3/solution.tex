@@ -1,0 +1,157 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\title{Problem Set 3 Solutions\\ Chemistry 675, Fall 2024}
+\date{}
+\author{}
+
+\begin{document}
+
+\maketitle
+
+\section*{1}
+
+Consider the potential:
+\[
+V(x) = 
+\begin{cases} 
+    0 & \text x < 0 \\
+    V_0 & \text x \geq 0
+\end{cases}
+\]
+with energy $0 < E < V_0$.
+
+\*{(a) Draw the potential energy surface making sure to remember axes labels}
+
+
+\*{(b) Calculate the wavefunction in all regions of space.}\\
+\[
+\Psi(x) = 
+\begin{cases} 
+    Ae^{ikx} + Be^{-ikx} & x < 0 \\
+    Ce^{-\kappa x} & x \geq 0
+\end{cases}
+\]
+where $k = \sqrt{\frac{2mE}{\hbar^2}}$ and $\kappa = \sqrt{\frac{2m(V_0 - E)}{\hbar^2}}$.
+
+The boundary conditions at $x = 0$ (continuity of $\Psi(x)$ and $\frac{d\Psi(x)}{dx}$) give the relations between $A$, $B$, and $C$.\\
+Continuity of $\Psi(x)$ gives $A+B=C$ and continuity of $\frac{d\Psi(x)}{dx}$ gives $ik(A-B) = -\kappa C$.
+
+\*{(c) Determine the reflection and transmission coefficients}\\
+The reflection coefficient $R$ and the transmission coefficient $T$ are given by:
+\[
+R = \left| \frac{B}{A} \right|^2
+\]
+\[
+T = \left| \frac{C}{A} \right|^2
+\]
+The coefficients depend on the ratio between $E$ and $V_0$. For $E < V_0$, the particle will be partially reflected and partially transmitted into the region $x \geq 0$.
+
+\section*{2.}
+
+The wavepacket is given by:
+\[
+\Psi(x, t = 0) = \left( \frac{A^2}{\pi} \right)^{1/4} e^{-\frac{a^2 (x - L/2)^2}{2} + ik_0 x }
+\]
+with $L = 10 \, \text{au}$, $a = 2 \, \text{au}$, and $k_0 = 10 \, \text{au}$.
+
+\*{(a)  Given that the position x must be a length and the argument of an exponent must be unitless, convert L, a, and k0
+to SI units.}
+We can convert the units from atomic units (au) to SI units using the following:
+\begin{align*}
+1 \, \text{au of length} & = 5.29177 \times 10^{-11} \, \text{m} \\
+1 \, \text{au of momentum} & = 1.99285 \times 10^{-24} \, \text{kg} \, \text{m/s}
+\end{align*}
+Thus,
+\[
+L = 10 \, \text{au} = 5.29177 \times 10^{-10} \, \text{m}, \quad a = 2 \, \text{au} = 1.05835 \times 10^{-10} \, \text{m}, \quad k_0 = 10 \, \text{au} = 1.99285 \times 10^{-23} \, \text{kg} \, \text{m/s}.
+\]
+
+\*{(b) Compute the average momentum of the electron.}
+The average momentum of the electron is given by:
+\[
+\langle p \rangle = \hbar k_0 = (1.05457 \times 10^{-34} \, \text{Js}) \times (10 \, \text{au}) = 1.05457 \times 10^{-33} \, \text{kg m/s}.
+\]
+
+\*{(c) Expand the wavefunction in terms of particle-in-a-box basis states.}
+The wavefunction can be expanded in terms of particle-in-a-box eigenstates $\psi_n(x)$:
+\[
+\Psi(x, t = 0) = \sum_{n} c_n \psi_n(x),
+\]
+where $\psi_n(x) = \sqrt{\frac{2}{L}} \sin\left(\frac{n \pi x}{L}\right)$, and $c_n$ are the expansion coefficients, determined by:
+\[
+c_n = \int_{0}^{L} \psi^*_n(x)  \Psi(x, 0) \, dx.
+\]
+
+\*{(d) Plot $|\Psi(x, t)|^2$ at several times between 0 and 2 au, and describe the motion of the particle.}
+The plot of $|\Psi(x, t)|^2$ at several times can be computed numerically by solving the time-dependent Schrödinger equation.
+
+\*{(e) Compute the amount of time for a classical electron of momentum ~$k_0$ to pass from the center of the box to the wall.}
+The time for a classical electron to travel from the center of the box to the wall is given by:
+\[
+t = \frac{L/2}{v} = \frac{L/2}{\frac{\hbar k_0}{m}},
+\]
+where $v$ is the velocity of the electron, $v = \frac{\hbar k_0}{m}$.
+
+\*{(f) How do the results change for different a?
+}
+Changing $a$ affects the initial localization of the wavepacket. A larger $a$ will result in a more spread-out wavepacket, while a smaller $a$ will give a more localized wavepacket.
+
+\*{(g) How do the results change for different L?
+}
+Changing $L$ affects the energy levels of the particle in the box. A larger $L$ will reduce the energy spacing of the energy eigenstates of particle-in-a-box, while a smaller $L$ will increase the energy level spacing. If the energy (momentum) spacing of the basis are small, dispersion of the wave packet would be slower, and vice versa.\\
+
+
+\*{3. Consider a right-moving particle subject to the potential
+}
+
+Consider the potential:
+\[
+V(x) = 
+\begin{cases} 
+    0 & x < 0 \\
+    V_0 & 0 \leq x \leq L \\
+    0 & x > L
+\end{cases}
+\]
+
+\*{(a)}
+The wavefunction for $E < V_0$ can be determined as:
+\[
+\Psi(x) = 
+\begin{cases} 
+    Ae^{ikx} + Be^{-ikx} & x < 0 \\
+    C \cosh(\kappa x) + D \sinh(\kappa x) & 0 \leq x \leq L \\
+    Fe^{ikx} & x > L
+\end{cases}
+\]
+where $\kappa = \sqrt{\frac{2m(V_0 - E)}{\hbar^2}}$.
+
+\*{(b)}
+The reflection and transmission coefficients are:
+\[
+R = \left| \frac{B}{A} \right|^2, \quad T = \left| \frac{F}{A} \right|^2.
+\]
+Quantum tunneling occurs for $E < V_0$, allowing the particle to have a nonzero transmission probability despite the classical forbidden region.
+
+\*{(c)}
+For $E > V_0$, the wavefunction takes the form:
+\[
+\Psi(x) = 
+\begin{cases} 
+    Ae^{ikx} + Be^{-ikx} & x < 0 \\
+    C e^{iqx} + D e^{-iqx} & 0 \leq x \leq L \\
+    Fe^{ikx} & x > L
+\end{cases}
+\]
+where $q = \sqrt{\frac{2m(E - V_0)}{\hbar^2}}$.
+
+\*{(d)}
+For $E > V_0$, quantum reflection occurs. The reflection and transmission coefficients are calculated as:
+\[
+R = \left| \frac{B}{A} \right|^2, \quad T = \left| \frac{F}{A} \right|^2.
+\]
+
+\end{document}
